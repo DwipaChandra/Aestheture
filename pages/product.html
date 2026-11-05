@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aestheture - Katalog Furnitur Kayu Solid</title>
+    <meta name="description" content="Jelajahi koleksi lengkap perabot kayu jati dan mahoni solid Aestheture. Sofa, meja makan, lounge chair, credenza TV, dan tempat tidur buatan tangan pengrajin Jepara.">
+    <meta name="theme-color" content="#C9B59C">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aestheture - Katalog Furnitur Kayu Solid">
+    <meta property="og:description" content="Koleksi lengkap sofa, meja makan, kursi santai, credenza, dan ranjang kayu solid berkualitas tinggi.">
+    <meta property="og:image" content="../assets/photo/hero.jpg">
+
+    <link rel="stylesheet" href="../assets/css/product.css">
+    <link rel="shortcut icon" href="../assets/photo/logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="nav-container">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/photo/logo.png" alt="Aestheture Logo">
+                    <span>Aestheture</span>
+                </a>
+                <input type="checkbox" name="hamburger" id="hamburger" class="hamburger">
+                <label for="hamburger" class="hamburger-label" aria-label="Menu navigasi">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    <li><a href="product.html" class="active">Produk</a></li>
+                    <li><a href="gallery.html">Galeri</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="nav-cart-btn" id="navCartBtn" aria-label="Lihat Keranjang Belanja">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                            <line x1="3" y1="6" x2="21" y2="6"/>
+                            <path d="M16 10a4 4 0 0 1-8 0"/>
+                        </svg>
+                        <span class="nav-cart-badge" id="navCartBadge" style="display: none;">0</span>
+                    </button>
+                    <ul class="nav-cta">
+                        <li><a href="product.html">Pesan Sekarang</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="dark">
+        <!-- HERO / BANNER -->
+        <section class="product-hero">
+            <div class="section-inner product-hero-inner" data-aos="fade-up">
+                <span class="eyebrow">Katalog Koleksi</span>
+                <h1>Perabot untuk setiap sudut ruang hidupmu.</h1>
+                <p>Koleksi lengkap sofa, meja makan, kursi, credenza, dan tempat tidur berbahan kayu jati solid Grade A pilihan &mdash; seluruhnya dapat dikustomisasi sesuai ukuran ruangan Anda.</p>
+                <div class="promo-banner">Promo Spesial: Gratis Ongkir &amp; Perakitan Jabodetabek + Garansi Struktur 5 Tahun.</div>
+            </div>
+        </section>
+
+        <!-- SEARCH & FILTER (UNIFIED 1-ROW TOOLBAR) -->
+        <section class="catalog-controls">
+            <div class="section-inner catalog-controls-inner" data-aos="fade-up" data-aos-delay="100">
+                <div class="search-bar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+                    <input type="text" id="productSearch" placeholder="Cari perabot, misal 'meja jati', 'sofa', 'kursi'...">
+                </div>
+                <div class="filter-group">
+                    <select id="filterCategory" aria-label="Filter kategori">
+                        <option value="all">Semua Kategori</option>
+                        <option value="sofa">Sofa &amp; Lounge</option>
+                        <option value="meja">Meja (Makan, Kopi, Kerja)</option>
+                        <option value="kursi">Kursi &amp; Bangku</option>
+                        <option value="penyimpanan">Lemari, Rak, Kamar &amp; Dekor</option>
+                    </select>
+                    <select id="filterPrice" aria-label="Filter harga">
+                        <option value="all">Semua Harga (Maks. Rp 5 Jt)</option>
+                        <option value="low">Di bawah Rp 2.000.000</option>
+                        <option value="mid">Rp 2.000.000 &ndash; Rp 3.500.000</option>
+                        <option value="high">Rp 3.500.000 &ndash; Rp 5.000.000</option>
+                    </select>
+                    <select id="sortPopularity" aria-label="Urutkan produk">
+                        <option value="popular">Paling Populer</option>
+                        <option value="price-asc">Harga: Terendah ke Tertinggi</option>
+                        <option value="price-desc">Harga: Tertinggi ke Terendah</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT GRID -->
+        <section class="catalog">
+            <div class="section-inner catalog-inner">
+                <p class="catalog-count" id="catalogCount"></p>
+                <div class="product-grid catalog-grid" id="catalogGrid">
+
+                    <!-- [LIVING ROOM] -->
+                    <!-- 1. Sofa Bed Minimalis 3 Dudukan -->
+                    <article class="product-card" data-category="sofa" data-price="3499000" data-popularity="5">
+                        <div class="product-thumb">
+                            <span class="swatch">Linen &amp; Busa 32D</span>
+                            <span class="tag tag-seller">Best Seller</span>
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Sofa Bed Minimalis 3 Dudukan" width="800" height="600" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Sofa Bed Minimalis 3 Dudukan</h3>
+                            <div class="rating">★★★★★ <span>(142 ulasan)</span></div>
+                            <div class="price">Rp 3.499.000</div>
+                            <div class="card-actions">
+                                <button type="button" class="btn-primary btn-add-cart" aria-label="Tambah ke keranjang">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                    + Keranjang
+                                </button>
+                                <button class="btn-outline quick-view"
+                                    data-name="Sofa Bed Minimalis 3 Dudukan"
+                                    data-price="Rp 3.499.000"
+                                    data-material="Rangka Kayu Solid, Kain Fabric Linen Breathable &amp; High-Density Foam 32D"
+                                    data-dimension="210 x 95 x 82 cm (Posisi Bed: 210 x 135 cm)"
+                                    data-finish="Textured Oat Fabric &amp; Solid Wood Legs"
+                                    data-img="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                    data-desc="Sofa bed modular serbaguna dengan mekanisme lipat presisi yang mudah diubah menjadi tempat tidur santai. Dilengkapi busa densitas tinggi yang empuk dan kain linen adem.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 2. Meja Kopi Bulat Kayu Jati -->
+                    <article class="product-card" data-category="meja" data-price="850000" data-popularity="5">
+                        <div class="product-thumb">
+                            <span class="swatch">Oak Natural</span>
+                            <span class="tag tag-seller">Best Seller</span>
+                            <img src="../assets/photo/products/meja-kopi-bulat.jpg" alt="Meja Kopi Bulat Kayu Jati" width="800" height="600" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Meja Kopi Bulat Kayu Jati</h3>
+                            <div class="rating">★★★★★ <span>(98 ulasan)</span></div>
+                            <div class="price">Rp 850.000</div>
+                            <div class="card-actions">
+                                <button type="button" class="btn-primary btn-add-cart" aria-label="Tambah ke keranjang">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                    + Keranjang
+                                </button>
+                                <button class="btn-outline quick-view"
+                                    data-name="Meja Kopi Bulat Kayu Jati"
+                                    data-price="Rp 850.000"
+                                    data-material="Solid White Oak &amp; Engineered Wood Veneer Grade A"
+                                    data-dimension="Diameter 70 cm, Tinggi 45 cm"
+                                    data-finish="Natural Matte Polyurethane Coating"
+                                    data-img="../assets/photo/products/meja-kopi-bulat.jpg"
+                                    data-desc="Meja kopi bundar bergaya Japandi minimalis dengan tepi bevel melengkung yang aman untuk keluarga dan kaki tirus kokoh.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 3. Meja TV Kayu Minimalis -->
+                    <article class="product-card" data-category="penyimpanan" data-price="1750000" data-popularity="4">
+                        <div class="product-thumb">
+                            <span class="swatch">Kayu Natural &amp; Rotan</span>
+                            <span class="tag tag-new">New</span>
+                            <img src="../assets/photo/products/meja-tv-kayu.jpg" alt="Meja TV Kayu Minimalis" width="800" height="600" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Meja TV Kayu Minimalis</h3>
+                            <div class="rating">★★★★☆ <span>(67 ulasan)</span></div>
+                            <div class="price">Rp 1.750.000</div>
+                            <div class="card-actions">
+                                <button type="button" class="btn-primary btn-add-cart" aria-label="Tambah ke keranjang">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                    + Keranjang
+                                </button>
+                                <button class="btn-outline quick-view"
+                                    data-name="Meja TV Kayu Minimalis"
+                                    data-price="Rp 1.750.000"
+                                    data-material="Kayu Solid Kombinasi Pintu Anyaman Rotan &amp; Rangka Besi"
+                                    data-dimension="150 x 40 x 52 cm"
+                                    data-finish="Light Oak &amp; Matte Black Metal"
+                                    data-img="../assets/photo/products/meja-tv-kayu.jpg"
+                                    data-desc="Credenza TV modern dengan pintu geser rotan senyap, kompartemen kabel tersembunyi, dan ambalan terbuka untuk perangkat media console.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 4. Kursi Santai Busa Empuk -->
+                    <article class="product-card" data-category="kursi" data-price="1650000" data-popularity="4">
+                        <div class="product-thumb">
+                            <span class="swatch">Velvet Lembut</span>
+                            <span class="tag tag-promo">Promo</span>
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Kursi Santai Busa Empuk" width="800" height="600" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Kursi Santai Busa Empuk</h3>
+                            <div class="rating">★★★★★ <span>(84 ulasan)</span></div>
+                            <div class="price">Rp 1.650.000</div>
+                            <div class="card-actions">
+                                <button type="button" class="btn-primary btn-add-cart" aria-label="Tambah ke keranjang">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                    + Keranjang
+                                </button>
+                                <button class="btn-outline quick-view"
+                                    data-name="Kursi Santai Busa Empuk"
+                                    data-price="Rp 1.650.000"
+                                    data-material="Kain Velvet Premium, Busa Ergonomis &amp; Kaki Logam Emas"
+                                    data-dimension="72 x 75 x 80 cm (Tinggi Duduk 44 cm)"
+                                    data-finish="Mustard Velvet &amp; Satin Gold Legs"
+                                    data-img="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                    data-desc="Kursi santai berbalut kain velvet lembut dengan sandaran melengkung ergonomis yang memeluk tubuh, menghadirkan aksen mewah pada ruang tamu.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- [HOME OFFICE] -->
+                    <!-- 5. Kursi Kerja Ergonomis Jaring -->
+                    <article class="product-card" data-category="kursi" data-price="1250000" data-popularity="5">
+                        <div class="product-thumb">
+                            <span class="swatch">Mesh Sirkulatif</span>
+                            <span class="tag tag-seller">Best Seller</span>
+                            <img src="https://images.unsplash.com/photo-1505797149-43b0069ec26b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Kursi Kerja Ergonomis Jaring" width="800" height="600" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Kursi Kerja Ergonomis Jaring</h3>
+                            <div class="rating">★★★★★ <span>(156 ulasan)</span></div>
+                            <div class="price">Rp 1.250.000</div>
+                            <div class="card-actions">
+                                <button type="button" class="btn-primary btn-add-cart" aria-label="Tambah ke keranjang">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                    + Keranjang
+                                </button>
+                                <button class="btn-outline quick-view"
+                                    data-name="Kursi Kerja Ergonomis Jaring"
+                                    data-price="Rp 1.250.000"
+                                    data-material="Nylon Mesh Elastis, Lumbar Support &amp; Rangka Gaslift Class 4"
+                                    data-dimension="62 x 60 x 115-125 cm (Adjustable)"
+                                    data-finish="Matte Black &amp; High-Elasticity Mesh"
+                                    data-img="https://images.unsplash.com/photo-1505797149-43b0069ec26b?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                    data-desc="Kursi kerja ergonomis dengan sandaran mesh bernapas, penopang pinggang aktif (lumbar support), dan sandaran kepala yang dapat disesuaikan untuk kenyamanan WFH seharian.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 6. Meja Kerja Elektrik Fleksibel -->
+                    <article class="product-card" data-category="meja" data-price="2890000" data-popularity="5">
+                        <div class="product-thumb">
+                            <span class="swatch">Motor Dual &amp; Oak Top</span>
+                            <span class="tag tag-new">New</span>
+                            <img src="../assets/photo/products/meja-kerja-sela.jpg" alt="Meja Kerja Elektrik Fleksibel" width="800" height="600" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Meja Kerja Elektrik Fleksibel</h3>
+                            <div class="rating">★★★★★ <span>(112 ulasan)</span></div>
+                            <div class="price">Rp 2.890.000</div>
+                            <div class="card-actions">
+                                <button type="button" class="btn-primary btn-add-cart" aria-label="Tambah ke keranjang">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                    + Keranjang
+                                </button>
+                                <button class="btn-outline quick-view"
+                                    data-name="Meja Kerja Elektrik Fleksibel"
+                                    data-price="Rp 2.890.000"
+                                    data-material="Daun Meja Solid Wood Finish &amp; Kaki Baja Anti-Guncang Dual-Motor"
+                                    data-dimension="140 x 70 x 71-118 cm"
+                                    data-finish="Natural Oak Surface &amp; White Steel Frame"
+                                    data-img="../assets/photo/products/meja-kerja-sela.jpg"
+                                    data-desc="Meja kerja elektrik dengan kontrol ketinggian digital pintar, 4 slot memori ketinggian, sensor anti-tabrakan, dan saluran kabel terpadu.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 7. Lampu Meja Belajar Hitam -->
+                    <article class="product-card" data-category="penyimpanan" data-price="320000" data-popularity="4">
+                        <div class="product-thumb">
+                            <span class="swatch">Aluminium Matte</span>
+                            <span class="tag tag-promo">Promo</span>
+                            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Lampu Meja Belajar Hitam" width="800" height="600" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Lampu Meja Belajar Hitam</h3>
+                            <div class="rating">★★★★☆ <span>(73 ulasan)</span></div>
+                            <div class="price">Rp 320.000</div>
+                            <div class="card-actions">
+                                <button type="button" class="btn-primary btn-add-cart" aria-label="Tambah ke keranjang">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                    + Keranjang
+                                </button>
+                                <button class="btn-outline quick-view"
+                                    data-name="Lampu Meja Belajar Hitam"
+                                    data-price="Rp 320.000"
+                                    data-material="Aluminium Alloy, LED Eye-Care 3000K-6000K &amp; Touch Sensor"
+                                    data-dimension="15 x 35 x 42 cm"
+                                    data-finish="Matte Black Coating"
+                                    data-img="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                    data-desc="Lampu meja kerja minimalis dengan pencahayaan LED ramah mata (flicker-free), 3 tingkat kecerahan sentuh, dan leher fleksibel 360 derajat.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- [DINING ROOM] -->
+                    <!-- 8. Meja Makan Kayu Jati 4 Kursi -->
+                    <article class="product-card" data-category="meja" data-price="2450000" data-popularity="5">
+                        <div class="product-thumb">
+                            <span class="swatch">Kayu Jati Solid</span>
+                            <span class="tag tag-seller">Best Seller</span>
+                            <img src="../assets/photo/products/meja-makan-svalbard.jpg" alt="Meja Makan Kayu Jati 4 Kursi" width="800" height="600" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Meja Makan Kayu Jati 4 Kursi</h3>
+                            <div class="rating">★★★★★ <span>(121 ulasan)</span></div>
+                            <div class="price">Rp 2.450.000</div>
+                            <div class="card-actions">
+                                <button type="button" class="btn-primary btn-add-cart" aria-label="Tambah ke keranjang">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                    + Keranjang
+                                </button>
+                                <button class="btn-outline quick-view"
+                                    data-name="Meja Makan Kayu Jati 4 Kursi"
+                                    data-price="Rp 2.450.000"
+                                    data-material="Kayu Jati Solid Pilihan Grade A"
+                                    data-dimension="140 x 80 x 75 cm (Tebal Top 3 cm)"
+                                    data-finish="Natural Warm Teak Satin"
+                                    data-img="../assets/photo/products/meja-makan-svalbard.jpg"
+                                    data-desc="Meja makan 4 kursi berbahan kayu jati solid dengan serat urat alami yang hangat. Dilapisi pelindung anti-gores dan tahan tumpahan air panas.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 9. Set 2 Kursi Makan Rotan Alami -->
+                    <article class="product-card" data-category="kursi" data-price="1150000" data-popularity="4">
+                        <div class="product-thumb">
+                            <span class="swatch">Rotan Alami Jepara</span>
+                            <span class="tag tag-promo">Promo</span>
+                            <img src="https://images.unsplash.com/photo-1519947486511-46149fa0a254?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Set 2 Kursi Makan Rotan Alami" width="800" height="600" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Set 2 Kursi Makan Rotan Alami</h3>
+                            <div class="rating">★★★★★ <span>(89 ulasan)</span></div>
+                            <div class="price">Rp 1.150.000</div>
+                            <div class="card-actions">
+                                <button type="button" class="btn-primary btn-add-cart" aria-label="Tambah ke keranjang">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                    + Keranjang
+                                </button>
+                                <button class="btn-outline quick-view"
+                                    data-name="Set 2 Kursi Makan Rotan Alami"
+                                    data-price="Rp 1.150.000"
+                                    data-material="Rangka Kayu Solid Mahoni &amp; Anyaman Rotan Alami Hexagonal"
+                                    data-dimension="48 x 52 x 84 cm (Isi 2 unit)"
+                                    data-finish="Natural Bleached Rattan &amp; Smooth Satin Frame"
+                                    data-img="https://images.unsplash.com/photo-1519947486511-46149fa0a254?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                    data-desc="Set 2 kursi makan bernuansa bohemian Japandi dengan sandaran rotan anyam manual pengrajin lokal yang sejuk dan sirkulatif.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 10. Kursi Bar Kayu Minimalis -->
+                    <article class="product-card" data-category="kursi" data-price="580000" data-popularity="3">
+                        <div class="product-thumb">
+                            <span class="swatch">Kayu Solid Whitewash</span>
+                            <span class="tag tag-new">New</span>
+                            <img src="../assets/photo/products/bangku-selaras.jpg" alt="Kursi Bar Kayu Minimalis" width="800" height="600" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Kursi Bar Kayu Minimalis</h3>
+                            <div class="rating">★★★★☆ <span>(52 ulasan)</span></div>
+                            <div class="price">Rp 580.000</div>
+                            <div class="card-actions">
+                                <button type="button" class="btn-primary btn-add-cart" aria-label="Tambah ke keranjang">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                    + Keranjang
+                                </button>
+                                <button class="btn-outline quick-view"
+                                    data-name="Kursi Bar Kayu Minimalis"
+                                    data-price="Rp 580.000"
+                                    data-material="Kayu Solid Pinus Whitewash &amp; Footrest Metal"
+                                    data-dimension="38 x 38 x 70 cm (Tinggi Dudukan 70 cm)"
+                                    data-finish="Whitewash Natural &amp; Smooth Satin"
+                                    data-img="../assets/photo/products/bangku-selaras.jpg"
+                                    data-desc="Kursi bar counter minimalis yang ramping dan kokoh dengan lubang handle praktis untuk area kitchen island atau pantry bar rumah Anda.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- [BEDROOM] -->
+                    <!-- 11. Rangka Tempat Tidur Kayu Jati -->
+                    <article class="product-card" data-category="penyimpanan" data-price="3850000" data-popularity="5">
+                        <div class="product-thumb">
+                            <span class="swatch">Kayu Solid 160x200</span>
+                            <span class="tag tag-seller">Best Seller</span>
+                            <img src="../assets/photo/products/tempat-tidur-alun.jpg" alt="Rangka Tempat Tidur Kayu Jati" width="800" height="600" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Rangka Tempat Tidur Kayu Jati</h3>
+                            <div class="rating">★★★★★ <span>(104 ulasan)</span></div>
+                            <div class="price">Rp 3.850.000</div>
+                            <div class="card-actions">
+                                <button type="button" class="btn-primary btn-add-cart" aria-label="Tambah ke keranjang">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                    + Keranjang
+                                </button>
+                                <button class="btn-outline quick-view"
+                                    data-name="Rangka Tempat Tidur Kayu Jati"
+                                    data-price="Rp 3.850.000"
+                                    data-material="Kayu Solid Oven Kering &amp; Sistem Slat Kayu Solid Tahan Beban 300kg"
+                                    data-dimension="168 x 208 x 95 cm (Untuk Matras 160x200 cm)"
+                                    data-finish="Natural Teak Semi-Gloss"
+                                    data-img="../assets/photo/products/tempat-tidur-alun.jpg"
+                                    data-desc="Rangka tempat tidur platform queen size dengan headboard bersiluet minimalis, sambungan mortise presisi bebas derit, dan ketinggian ideal untuk kenyamanan tidur maksimal.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 12. Kasur Busa Ortopedi Nyaman -->
+                    <article class="product-card" data-category="penyimpanan" data-price="2990000" data-popularity="4">
+                        <div class="product-thumb">
+                            <span class="swatch">Pocket Spring &amp; Foam</span>
+                            <span class="tag tag-new">New</span>
+                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Kasur Busa Ortopedi Nyaman" width="800" height="600" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Kasur Busa Ortopedi Nyaman</h3>
+                            <div class="rating">★★★★★ <span>(78 ulasan)</span></div>
+                            <div class="price">Rp 2.990.000</div>
+                            <div class="card-actions">
+                                <button type="button" class="btn-primary btn-add-cart" aria-label="Tambah ke keranjang">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                    + Keranjang
+                                </button>
+                                <button class="btn-outline quick-view"
+                                    data-name="Kasur Busa Ortopedi Nyaman"
+                                    data-price="Rp 2.990.000"
+                                    data-material="Individual Pocket Spring, Natural Latex Layer &amp; Kain Knitted Alami"
+                                    data-dimension="160 x 200 x 28 cm"
+                                    data-finish="Anti-Bacterial Knitted Fabric White &amp; Grey"
+                                    data-img="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                    data-desc="Kasur ortopedi dengan sistem pegas independen (pocket spring) yang meredam guncangan gerakan dan lapisan lateks alami penopang tulang belakang.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 13. Meja Nakas Kayu 2 Laci -->
+                    <article class="product-card" data-category="penyimpanan" data-price="450000" data-popularity="4">
+                        <div class="product-thumb">
+                            <span class="swatch">Kayu Solid Natural</span>
+                            <span class="tag tag-promo">Promo</span>
+                            <img src="../assets/photo/products/nakas-reka.jpg" alt="Meja Nakas Kayu 2 Laci" width="800" height="600" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Meja Nakas Kayu 2 Laci</h3>
+                            <div class="rating">★★★★☆ <span>(63 ulasan)</span></div>
+                            <div class="price">Rp 450.000</div>
+                            <div class="card-actions">
+                                <button type="button" class="btn-primary btn-add-cart" aria-label="Tambah ke keranjang">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                    + Keranjang
+                                </button>
+                                <button class="btn-outline quick-view"
+                                    data-name="Meja Nakas Kayu 2 Laci"
+                                    data-price="Rp 450.000"
+                                    data-material="Solid Natural Wood &amp; Open Storage Compartment"
+                                    data-dimension="45 x 35 x 55 cm"
+                                    data-finish="Natural Waxed Oak Finish"
+                                    data-img="../assets/photo/products/nakas-reka.jpg"
+                                    data-desc="Meja samping ranjang bergaya Skandinavia dengan kompartemen terbuka 2 tingkat untuk buku, gadget, tanaman mini, dan aksesoris tidur.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 14. Lemari Dinding Kayu 2 Pintu -->
+                    <article class="product-card" data-category="penyimpanan" data-price="1850000" data-popularity="4">
+                        <div class="product-thumb">
+                            <span class="swatch">Kayu Oak &amp; 2 Pintu</span>
+                            <span class="tag tag-new">New</span>
+                            <img src="../assets/photo/products/lemari-beku.jpg" alt="Lemari Dinding Kayu 2 Pintu" width="800" height="600" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Lemari Dinding Kayu 2 Pintu</h3>
+                            <div class="rating">★★★★★ <span>(59 ulasan)</span></div>
+                            <div class="price">Rp 1.850.000</div>
+                            <div class="card-actions">
+                                <button type="button" class="btn-primary btn-add-cart" aria-label="Tambah ke keranjang">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                    + Keranjang
+                                </button>
+                                <button class="btn-outline quick-view"
+                                    data-name="Lemari Dinding Kayu 2 Pintu"
+                                    data-price="Rp 1.850.000"
+                                    data-material="Solid Oak Veneer &amp; Rak Terbuka Multifungsi"
+                                    data-dimension="90 x 32 x 120 cm"
+                                    data-finish="Natural Light Oak Melamine"
+                                    data-img="../assets/photo/products/lemari-beku.jpg"
+                                    data-desc="Lemari gantung dinding kayu minimalis dengan 2 pintu samping tertutup dan rak terbuka di tengah untuk perlengkapan mandi, linen, dan aksesoris rumah.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- [STORAGE & DECOR] -->
+                    <!-- 15. Ambalan & Meja Kerja Kayu Solid -->
+                    <article class="product-card" data-category="penyimpanan" data-price="980000" data-popularity="4">
+                        <div class="product-thumb">
+                            <span class="swatch">Kayu Solid Oak Pilihan</span>
+                            <span class="tag tag-seller">Best Seller</span>
+                            <img src="../assets/photo/products/ambalan-kayu.jpg" alt="Ambalan &amp; Meja Kerja Kayu Solid" width="800" height="600" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Ambalan &amp; Meja Kerja Kayu Solid</h3>
+                            <div class="rating">★★★★★ <span>(88 ulasan)</span></div>
+                            <div class="price">Rp 980.000</div>
+                            <div class="card-actions">
+                                <button type="button" class="btn-primary btn-add-cart" aria-label="Tambah ke keranjang">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                    + Keranjang
+                                </button>
+                                <button class="btn-outline quick-view"
+                                    data-name="Ambalan &amp; Meja Kerja Kayu Solid"
+                                    data-price="Rp 980.000"
+                                    data-material="Kayu Solid Oak Pilihan &amp; Bracket Tersembunyi"
+                                    data-dimension="120 x 45 x 4 cm (Ambalan Atas: 90 x 20 x 4 cm)"
+                                    data-finish="Natural Oak Wax Satin"
+                                    data-img="../assets/photo/products/ambalan-kayu.jpg"
+                                    data-desc="Ambalan dinding gantung multifungsi berbahan kayu solid kokoh yang dapat difungsikan sebagai meja kerja gantung hemat ruang maupun rak pajang dekoratif.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 16. Bangku Rak Sepatu Kayu Minimalis -->
+                    <article class="product-card" data-category="penyimpanan" data-price="620000" data-popularity="3">
+                        <div class="product-thumb">
+                            <span class="swatch">Bangku &amp; Rak Sepatu</span>
+                            <span class="tag tag-promo">Promo</span>
+                            <img src="../assets/photo/products/bangku-rak-sepatu.jpg" alt="Bangku Rak Sepatu Kayu Minimalis" width="800" height="600" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Bangku Rak Sepatu Kayu Minimalis</h3>
+                            <div class="rating">★★★★☆ <span>(45 ulasan)</span></div>
+                            <div class="price">Rp 620.000</div>
+                            <div class="card-actions">
+                                <button type="button" class="btn-primary btn-add-cart" aria-label="Tambah ke keranjang">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                    + Keranjang
+                                </button>
+                                <button class="btn-outline quick-view"
+                                    data-name="Bangku Rak Sepatu Kayu Minimalis"
+                                    data-price="Rp 620.000"
+                                    data-material="Kayu Solid Natural &amp; Dudukan Busa Linen Lembut"
+                                    data-dimension="90 x 35 x 48 cm"
+                                    data-finish="Natural Oak &amp; Grey Linen Cushion"
+                                    data-img="../assets/photo/products/bangku-rak-sepatu.jpg"
+                                    data-desc="Bangku serbaguna area pintu masuk rumah dengan dudukan empuk nyaman untuk memakai sepatu serta 2 ambalan rak bawah muat hingga 6-8 pasang sepatu.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 17. Cermin Dinding Bulat Minimalis -->
+                    <article class="product-card" data-category="penyimpanan" data-price="750000" data-popularity="5">
+                        <div class="product-thumb">
+                            <span class="swatch">Cermin Bulat Frame Metal</span>
+                            <span class="tag tag-seller">Best Seller</span>
+                            <img src="../assets/photo/products/cermin-bulat.jpg" alt="Cermin Dinding Bulat Minimalis" width="800" height="600" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Cermin Dinding Bulat Minimalis</h3>
+                            <div class="rating">★★★★★ <span>(130 ulasan)</span></div>
+                            <div class="price">Rp 750.000</div>
+                            <div class="card-actions">
+                                <button type="button" class="btn-primary btn-add-cart" aria-label="Tambah ke keranjang">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                    + Keranjang
+                                </button>
+                                <button class="btn-outline quick-view"
+                                    data-name="Cermin Dinding Bulat Minimalis"
+                                    data-price="Rp 750.000"
+                                    data-material="HD Silver Mirror &amp; Slim Matte Black Metal Frame"
+                                    data-dimension="Diameter 80 cm, Tebal Frame 2.5 cm"
+                                    data-finish="Matte Black Aluminium Anodized"
+                                    data-img="../assets/photo/products/cermin-bulat.jpg"
+                                    data-desc="Cermin dinding bulat modern dengan bingkai metal tipis elegan, pantulan jernih tanpa distorsi, dan bracket gantung kokoh untuk ruang tamu atau kamar tidur.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 18. Lampu Sudut Lantai Kaki Tiga -->
+                    <article class="product-card" data-category="penyimpanan" data-price="490000" data-popularity="4">
+                        <div class="product-thumb">
+                            <span class="swatch">Kaki Tripod Kayu</span>
+                            <span class="tag tag-new">New</span>
+                            <img src="../assets/photo/products/lampu-sudut-lantai.jpg" alt="Lampu Sudut Lantai Kaki Tiga" width="800" height="600" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Lampu Sudut Lantai Kaki Tiga</h3>
+                            <div class="rating">★★★★☆ <span>(61 ulasan)</span></div>
+                            <div class="price">Rp 490.000</div>
+                            <div class="card-actions">
+                                <button type="button" class="btn-primary btn-add-cart" aria-label="Tambah ke keranjang">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                    + Keranjang
+                                </button>
+                                <button class="btn-outline quick-view"
+                                    data-name="Lampu Sudut Lantai Kaki Tiga"
+                                    data-price="Rp 490.000"
+                                    data-material="Kaki Kayu Solid Ashwood, Kap Lampu Kain Linen &amp; Fitting E27"
+                                    data-dimension="Tinggi 150 cm, Diameter Kap 42 cm"
+                                    data-finish="Natural Light Wood &amp; Warm Linen Fabric"
+                                    data-img="../assets/photo/products/lampu-sudut-lantai.jpg"
+                                    data-desc="Lampu lantai tripod Skandinavia yang memancarkan cahaya hangat menenangkan, menciptakan atmosfer ruangan yang estetik dan cozy.">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+                <p class="catalog-empty" id="catalogEmpty" hidden>Tidak ada produk yang cocok dengan pencarian Anda. Silakan coba kata kunci atau filter lain.</p>
+                <div class="catalog-empty-actions" id="emptyResetContainer" hidden>
+                    <button type="button" class="btn-reset-filter" id="resetFilterBtn">Reset Filter &amp; Pencarian</button>
+                </div>
+                <div class="pagination" id="pagination"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- QUICK VIEW MODAL -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" id="modalClose" aria-label="Tutup jendela detail">&times;</button>
+            <div class="modal-image"><img id="modalImg" src="" alt=""></div>
+            <div class="modal-body">
+                <span class="modal-material" id="modalMaterial"></span>
+                <h3 id="modalTitle"></h3>
+                <p id="modalDesc"></p>
+                
+                <div class="modal-specs">
+                    <div class="spec-item">
+                        <strong>Dimensi:</strong>
+                        <span id="modalDimension">-</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Finishing:</strong>
+                        <span id="modalFinish">-</span>
+                    </div>
+                </div>
+
+                <div class="modal-variants">
+                    <label>Pilihan Opsi / Ukuran</label>
+                    <div class="variant-options">
+                        <button class="variant active" type="button">Standar (Ready/PO)</button>
+                        <button class="variant" type="button">Custom Dimensi</button>
+                    </div>
+                </div>
+
+                <div class="modal-qty-row">
+                    <label for="modalQtyInput">Jumlah Pesanan:</label>
+                    <div class="modal-qty-picker">
+                        <button type="button" class="qty-btn" id="modalQtyMinus" aria-label="Kurangi jumlah">&minus;</button>
+                        <input type="number" id="modalQtyInput" value="1" min="1" max="99" aria-label="Kuantitas produk">
+                        <button type="button" class="qty-btn" id="modalQtyPlus" aria-label="Tambah jumlah">&#43;</button>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <div class="modal-price" id="modalPrice"></div>
+                    <span class="modal-stock">Stok / Siap Produksi</span>
+                </div>
+
+                <div class="modal-actions-group">
+                    <button type="button" class="modal-add-cart-btn" id="modalAddCartBtn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                        Tambah ke Keranjang
+                    </button>
+                    <a href="#" id="modalWaBtn" target="_blank" rel="noopener" class="btn-whatsapp">
+                        <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.983.538 1.838.823 2.796.824h.005c3.18 0 5.767-2.586 5.768-5.766.001-3.182-2.585-5.77-5.773-5.77zm3.435 8.163c-.144.404-.836.774-1.17.828-.314.05-.722.073-2.336-.596-1.936-.803-3.178-2.766-3.275-2.894-.095-.129-.778-1.034-.778-1.972 0-.937.49-1.398.665-1.589.175-.19.382-.239.51-.239.128 0 .255.002.366.007.117.006.275-.044.43.329.16.386.547 1.334.595 1.433.048.099.08.214.016.342-.064.129-.096.209-.191.32-.096.112-.202.249-.288.334-.096.096-.197.2-.085.39.112.19.497.819 1.066 1.325.733.653 1.35.856 1.542.951.191.096.319.144.366.223.048.08.048.463-.096.867zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.662 1.435 5.176L2 22l4.981-1.306A9.957 9.957 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+                        Konsultasi via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CART DRAWER / OFF-CANVAS -->
+    <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+    <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true">
+        <div class="cart-header">
+            <div class="cart-header-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <h3 id="cartTitle">Keranjang Belanja</h3>
+                <span class="cart-count-badge" id="cartHeaderCount">0 item</span>
+            </div>
+            <button class="cart-close-btn" id="cartCloseBtn" aria-label="Tutup keranjang belanja">&times;</button>
+        </div>
+
+        <div class="cart-body" id="cartBody">
+            <!-- Dynamically populated by script.js -->
+        </div>
+
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-promo-banner">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                <span>Gratis Ongkir &amp; Perakitan Jabodetabek</span>
+            </div>
+            <div class="cart-summary-row">
+                <span>Subtotal</span>
+                <span class="cart-total-price" id="cartTotalPrice">Rp 0</span>
+            </div>
+            <p class="cart-tax-note">Harga sudah termasuk asuransi &amp; garansi struktur 5 tahun.</p>
+            <div class="cart-footer-actions">
+                <a href="#" class="btn-checkout-wa" id="cartCheckoutBtn" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.983.538 1.838.823 2.796.824h.005c3.18 0 5.767-2.586 5.768-5.766.001-3.182-2.585-5.77-5.773-5.77zm3.435 8.163c-.144.404-.836.774-1.17.828-.314.05-.722.073-2.336-.596-1.936-.803-3.178-2.766-3.275-2.894-.095-.129-.778-1.034-.778-1.972 0-.937.49-1.398.665-1.589.175-.19.382-.239.51-.239.128 0 .255.002.366.007.117.006.275-.044.43.329.16.386.547 1.334.595 1.433.048.099.08.214.016.342-.064.129-.096.209-.191.32-.096.112-.202.249-.288.334-.096.096-.197.2-.085.39.112.19.497.819 1.066 1.325.733.653 1.35.856 1.542.951.191.096.319.144.366.223.048.08.048.463-.096.867zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.662 1.435 5.176L2 22l4.981-1.306A9.957 9.957 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+                    Checkout via WhatsApp
+                </a>
+                <button type="button" class="btn-clear-cart" id="clearCartBtn">Kosongkan Keranjang</button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- CART TOAST NOTIFICATION -->
+    <div class="cart-toast" id="cartToast" role="status" aria-live="polite">
+        <div class="cart-toast-content">
+            <div class="cart-toast-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="cart-toast-text">
+                <strong id="toastTitle">Berhasil ditambahkan!</strong>
+                <p id="toastDesc">Produk masuk ke keranjang.</p>
+            </div>
+            <button type="button" class="cart-toast-btn" id="toastOpenCart">Lihat</button>
+        </div>
+    </div>
+
+    <!-- FLOATING ACTIONS -->
+    <div class="floating-actions">
+        <button class="floating-btn floating-top" id="scrollTopBtn" aria-label="Kembali ke atas">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+        </button>
+        <a href="https://wa.me/6281234567890?text=Halo%20Aestheture,%20saya%20tertarik%20dengan%20katalog%20produk%20furnitur%20Anda." target="_blank" rel="noopener" class="floating-btn floating-whatsapp" aria-label="Konsultasi WhatsApp">
+            <span class="badge-pulse"></span>
+            <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.983.538 1.838.823 2.796.824h.005c3.18 0 5.767-2.586 5.768-5.766.001-3.182-2.585-5.77-5.773-5.77zm3.435 8.163c-.144.404-.836.774-1.17.828-.314.05-.722.073-2.336-.596-1.936-.803-3.178-2.766-3.275-2.894-.095-.129-.778-1.034-.778-1.972 0-.937.49-1.398.665-1.589.175-.19.382-.239.51-.239.128 0 .255.002.366.007.117.006.275-.044.43.329.16.386.547 1.334.595 1.433.048.099.08.214.016.342-.064.129-.096.209-.191.32-.096.112-.202.249-.288.334-.096.096-.197.2-.085.39.112.19.497.819 1.066 1.325.733.653 1.35.856 1.542.951.191.096.319.144.366.223.048.08.048.463-.096.867zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.662 1.435 5.176L2 22l4.981-1.306A9.957 9.957 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+        </a>
+    </div>
+
+    <footer id="kontak">
+        <div class="footer-inner">
+            <div class="footer-brand" data-aos="fade-up">
+                <a href="../index.html" class="logo"><img src="../assets/photo/logo.png" alt="Aestheture Logo"><span>Aestheture</span></a>
+                <p>Perabot kayu solid buatan tangan untuk rumah yang dipakai selamanya.</p>
+                <div class="footer-map">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Jl.+Kemang+Raya+No.+12,+Jakarta+Selatan&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+                        width="100%" 
+                        height="165" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Peta Lokasi Showroom Aestheture Kemang">
+                    </iframe>
+                </div>
+            </div>
+            <div class="footer-links" data-aos="fade-up" data-aos-delay="100">
+                <h4>Navigasi</h4>
+                <a href="../index.html">Beranda</a>
+                <a href="about.html">Tentang Kami</a>
+                <a href="product.html">Katalog Produk</a>
+                <a href="gallery.html">Galeri Foto</a>
+            </div>
+            <div class="footer-contact" data-aos="fade-up" data-aos-delay="200">
+                <h4>Kontak &amp; Showroom</h4>
+                <p><a href="https://wa.me/6281234567890" target="_blank" rel="noopener">WhatsApp: +62 812 3456 7890</a></p>
+                <p><a href="mailto:hello@aestheture.id">hello@aestheture.id</a></p>
+                <p><a href="https://maps.google.com/?q=Jl.+Kemang+Raya+No.+12,+Jakarta+Selatan" target="_blank" rel="noopener">Jl. Kemang Raya No. 12, Jakarta Selatan</a></p>
+                <p>Senin&ndash;Sabtu, 09.00&ndash;18.00 WIB</p>
+            </div>
+            <div class="footer-newsletter" data-aos="fade-up" data-aos-delay="300">
+                <h4>Newsletter</h4>
+                <div class="footer-social">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 3v11a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 3 2.5 5 5.5 5.3"/></svg></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M14 8.5h-1.5A1.5 1.5 0 0 0 11 10v2H9v2.5h2V19h2.5v-4.5H16l.5-2.5h-2V10c0-.3.2-.5.5-.5H16V8.5z"/></svg></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2.5" y="6" width="19" height="12" rx="3"/><path d="M10.5 9.5l5 2.5-5 2.5z"/></svg></a>
+                </div>
+                <p class="newsletter-lead">Dapatkan inspirasi interior dan diskon 10% untuk pesanan pertamamu.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Alamat email Anda" aria-label="Alamat email" required>
+                    <button type="submit">Daftar</button>
+                </form>
+                <p class="newsletter-note" id="newsletterNote" aria-live="polite"></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Aestheture. Seluruh hak cipta dilindungi. Handcrafted in Jepara, Indonesia.</span>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
